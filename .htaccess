@@ -1,0 +1,8 @@
+RewriteEngine On
+RewriteRule ^404\.* 404.php [L,NC]
+
+RewriteCond ^hwa/assets/(.*)\.(.*) -f
+RewriteRule ^(.*)$ /hwa/assets/$1 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule .* index.php
